@@ -1,0 +1,19 @@
+{{template "base" .}}
+ 
+{{define "title"}}Заметка #{{.Note.ID}}{{end}}
+ 
+{{define "main"}}
+    {{with .Note}}
+    <div class='note'>
+        <div class='metadata'>
+            <strong>{{.Title}}</strong>
+            <span>#{{.ID}}</span>
+        </div>
+        <pre><code>{{.Content}}</code></pre>
+        <div class='metadata'>
+            <time>Создан: {{.Created}}</time>
+            <time>Срок: {{.Expires}}</time>
+        </div>
+    </div>
+    {{end}}
+{{end}}

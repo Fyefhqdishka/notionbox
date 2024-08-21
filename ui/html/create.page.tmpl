@@ -1,0 +1,10 @@
+{{template "base" .}}
+
+    {{define "title"}}Создание заметки{{end}}
+        {{define "main"}}
+            <form action="/save" method="post">
+                <input id="title" type="text" name="title" placeholder="Введите заголовок" class="form-control"/><br>
+                <textarea name="content" id="content" class="form-control" placeholder="Введите заметку"></textarea><br>
+                <button class="btn">Добавить</button>
+            </form>
+{{end}}
